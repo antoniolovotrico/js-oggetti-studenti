@@ -35,11 +35,11 @@ var classe = [
 
 ];
 
-//for (var i = 0; i < classe.length; i++) {
+for (var i = 0; i < classe.length; i++) {
     
     console.log(classe);
-    document.getElementById("log2").innerHTML = "<li>"+ classe.nome+ "</li>";
-//}
+    document.getElementById("log2").innerHTML += "<li>" + classe[i]["nome"] + " " + classe[i]["cognome"] + "</li>";
+}
 // Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 var userStudent = {
     "nome" : "",
