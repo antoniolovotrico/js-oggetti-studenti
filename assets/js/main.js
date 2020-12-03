@@ -46,7 +46,7 @@ var userStudent = {
 }
 
 function addStudent(){
-    name = prompt("Inserisci il tuo nome");
+    var name = prompt("Inserisci il tuo nome");
     userStudent.nome = name;
     var surname = prompt("Inserisci il tuo cognome");
     userStudent.cognome = surname;
