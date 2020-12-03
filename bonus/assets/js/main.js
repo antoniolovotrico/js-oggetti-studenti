@@ -55,7 +55,9 @@ function addStudent(){
     var age = prompt("Inserisci la tua età");
     userStudent.eta = age;
     classe.push(userStudent)
-    document.getElementById("log3").innerHTML += "<li>" + classe[i]["nome"] + " " + classe[i]["cognome"] + "</li>";
+    for (var i = 0; i < classe.length; i++) {
+        document.getElementById("log3").innerHTML += "<li>" + classe[i]["nome"] + " " + classe[i]["cognome"] + "</li>";
+    }
 }
 
 setTimeout(addStudent,2000);
