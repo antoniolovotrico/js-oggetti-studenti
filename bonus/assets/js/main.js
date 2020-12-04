@@ -6,7 +6,7 @@ var student = {
 }
 
 for (var key in student) {
-    console.log(key ,student[key]);
+    console.log(key ,":",student[key]);
     document.getElementById("log1").innerHTML += "<li>"+ key +" : "+ student[key] + "</li>";
 }
 
@@ -34,10 +34,13 @@ var classe = [
     }
 
 ];
-
+   ///inserita e commentata variante LOOP FOR EACH///
+// classe.forEach(function(item){
+//     console.log(item.nome,item.cognome);
+// })
 for (var i = 0; i < classe.length; i++) {
     
-    console.log(classe);
+    console.log(classe[i].nome , classe[i].cognome);
     document.getElementById("log2").innerHTML += "<li>" + classe[i]["nome"] + " " + classe[i]["cognome"] + "</li>";
 }
 // Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
@@ -57,9 +60,10 @@ function addStudent(){
     classe.push(userStudent)
     for (var i = 0; i < classe.length; i++) {
         document.getElementById("log3").innerHTML += "<li>" + classe[i]["nome"] + " " + classe[i]["cognome"] + "</li>";
+        console.log(classe[i].nome , classe[i].cognome);
     }
 }
 
 setTimeout(addStudent,2000);
 console.log(userStudent);
-console.log(classe);
+
